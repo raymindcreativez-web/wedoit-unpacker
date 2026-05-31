@@ -13,9 +13,6 @@ import {
   Lightbulb
 } from 'lucide-react';
 
-// The execution environment provides the key at runtime
-const apiKey = "";
-
 // Embedded Budget of Work (BoW) Database extracted from uploaded PDFs
 const bowDatabase = {
   "Mathematics": {
@@ -202,7 +199,7 @@ export default function App() {
 
     for (let i = 0; i < retries; i++) {
       try {
-        const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`, {
+        const response = await fetch('/api/unpack', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(payload)
