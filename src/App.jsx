@@ -206,7 +206,22 @@ export default function App() {
         });
 
         if (!response.ok) {
-          throw new Error(`API Error: ${response.status}`);
+          let detail = "";
+          try {
+            const errBody = await response.json();
+            detail = errBody?.error?.message || errBody?.error || "";
+            if (typeof detail === "object") detail = JSON.stringify(detail);
+          } catch {
+            detail = await response.text().catch(() => "");
+          }
+
+          // Client/auth errors (400/401/403/404) won't fix themselves — surface immediately.
+          if ([400, 401, 403, 404].includes(response.status)) {
+            setError(`Gemini request rejected (HTTP ${response.status}). ${detail || "Check that GEMINI_API_KEY is valid, the Generative Language API is enabled, and the key has no HTTP-referrer restriction."}`);
+            setIsLoading(false);
+            return;
+          }
+          throw new Error(`API Error ${response.status}: ${detail}`);
         }
 
         const data = await response.json();
@@ -225,7 +240,7 @@ export default function App() {
         }
       } catch (err) {
         if (i === retries - 1) {
-          setError(`Failed to unpack competency after multiple attempts. ${isWholeTerm ? "Generating a whole term is complex; try reducing the session count slightly and try again." : "Please ensure the competency is clear and try again."}`);
+          setError(`Failed to unpack competency after multiple attempts. ${err?.message ? `(${err.message}) ` : ""}${isWholeTerm ? "Generating a whole term is complex; try reducing the session count slightly and try again." : "Please ensure the competency is clear and try again."}`);
         } else {
           await delay(delays[i]);
         }
