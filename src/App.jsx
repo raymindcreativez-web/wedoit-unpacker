@@ -14,18 +14,42 @@ import {
 } from 'lucide-react';
 
 // Embedded Budget of Work (BoW) Database extracted from uploaded PDFs
+// Embedded Budget of Work (BoW) Database extracted from uploaded PDFs
 const bowDatabase = {
   "Mathematics": {
     "Grade 7": {
       "First Term": {
         "1": "Measurement and Geometry: Draw and describe regular and irregular polygons with 5, 6, 8, or 10 sides, based on measurements of sides and angles, using a ruler and protractor. Draw triangles, quadrilaterals, and regular polygons (5, 6, 8, or 10 sides) with given angle measures.",
+        "2": "Measurement and Geometry: Describe and explain the relationships between angle pairs based on their measures. Classify polygons according to the number of sides, whether they are regular or irregular, and whether they are convex or non-convex.",
+        "3": "Measurement and Geometry: Deduce the relationship between the exterior angle and adjacent interior angle of a polygon. Determine the measures of angles and the number of sides of polygons.",
+        "4": "Number and Algebra: Solve problems involving: a. percentage increase b. percentage decrease. Solve money problems involving percentages (e. g., discount, commission, sales tax, simple interest).",
+        "5": "Number and Algebra: Create a financial plan.",
+        "6": "Number and Algebra: Identify and explain the uses of rates. Solve problems involving rates (e.g., speed).",
+        "7": "Number and Algebra: Describe given rational numbers as fractions, decimals, or percentages. Order rational numbers on a number line.",
+        "8 to 9": "Number and Algebra: Perform operations on rational numbers.",
+        "10": "Number and Algebra: Determine the square roots of perfect squares and the cube roots of perfect cubes. Identify irrational numbers involving square roots and cube roots, and their locations on the number line."
+      },
+      "Second Term": {
+        "1 to 2": "Measurement and Geometry: Convert units of measure within the International System of Units (SI) and across different systems of measure.",
+        "3": "Measurement and Geometry: Explain inductively the volume of a cylinder using the area of a circle, leading to the identification of the formula. Find the volume of a cylinder. Solve problems involving the volumes of cylinders.",
+        "4": "Measurement and Geometry: Explore inductively the volume of square and rectangular pyramids using rectangular prisms, leading to the identification of the formula. Estimate volumes of square and rectangular pyramids. Solve problems involving volumes of square or rectangular pyramids.",
+        "5": "Number and Algebra: Describe sets and their subsets, the union of sets, and the intersection of sets. Illustrate sets and their subsets, the union of sets, and the intersection of sets, through the use of Venn diagrams.",
+        "6": "Number and Algebra: Illustrate the different subsets of real numbers. Data and Probability: Investigate different data collection and sampling techniques.",
+        "7 to 8": "Data and Probability: Organize statistical data in a frequency distribution table. Use appropriate graphs to represent organized data: pie graph, bar graph, line graph, and stem-and-leaf plot. Interpret statistical graphs.",
+        "9": "Number and Algebra: Describe the set of integers. Use positive and negative numbers to describe directions or opposites in real-life situations.",
+        "10": "Number and Algebra: Locate integers on the number line. Compare and order integers."
+      },
+      "Third Term": {
+        "1": "Number and Algebra: Add and subtract integers; using concrete models (e.g., counters, integer chips), pictorial models (e.g., bar models, number lines), and with integers written as numerals.",
+        "2": "Number and Algebra: Multiply and divide integers. Simplify numerical expressions involving integers using number properties and the order of operations (GEMDAS).",
+        "3": "Number and Algebra: Identify the absolute value of an integer, and its meaning on the number line. Solve simple equations represented by bar models to find unknowns.",
         "4": "Number and Algebra: Distinguish a variable from a constant in an algebraic expression. Evaluate algebraic expressions given the value/s of the variable/s.",
         "5": "Number and Algebra: Translate verbal phrases into algebraic expressions. Illustrate the properties of equality.",
         "6": "Number and Algebra: Solve one variable in terms of the other variables in a formula. Write equations in algebraic form.",
         "7": "Number and Algebra: Find the value of an unknown in an equation where the unknown is non-negative. Solve problems involving algebraic expressions and formulas.",
-        "8": "Data and Probability: Collect data from experiments (e.g., number of heads obtained when tossing a coin...). Express outcomes in words and/or symbols, and represent outcomes in tables and/or graphs.",
-        "9": "Data and Probability: Solve problems using the outcomes of experiments.",
-        "10": "Data and Probability: Write numbers in scientific notation to represent very large or very small numbers, and vice versa. Perform operations on numbers expressed in scientific notation."
+        "8": "Data and Probability: Collect data from experiments (e.g., number of heads obtained when tossing a coin, a number of times, number of prime numbers obtained when rolling a die a number of times). Express outcomes in words and/or symbols, and represent outcomes in tables and/or graphs.",
+        "9": "Data and Probability: Solve problems using the outcomes of experiments. Write numbers in scientific notation to represent very large or very small numbers, and vice versa.",
+        "10": "Data and Probability: Perform operations on numbers expressed in scientific notation."
       }
     },
     "Grade 8": {
